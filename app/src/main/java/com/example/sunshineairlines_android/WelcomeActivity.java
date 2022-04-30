@@ -24,11 +24,16 @@ public class WelcomeActivity extends AppCompatActivity {
     boolean canOpenActivity=true;
 
     private void gotoMenu(){
-        //Intent intent=new Intent(WelcomeActivity.this, LoginActivity.class);
-        //startActivity(intent);
+        Intent intent=new Intent(WelcomeActivity.this, LoginActivity.class);
+        startActivity(intent);
         finish();
     }
 
+    private void setPageIndicator(int index){
+        for(int i=0;i<pagerIndicatorImages.size();i+=1){
+            pagerIndicatorImages.get(i).setImageResource(index==i?R.drawable.pager_indicator_on:R.drawable.pager_indicator_off);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,10 +68,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                ArrayList<ImageView> list=pagerIndicatorImages;
-                for(int i=0;i<list.size();i+=1){
-                    list.get(i).setImageResource(position==i?R.drawable.pager_indicator_on:R.drawable.pager_indicator_off);
-                }
+                setPageIndicator(position);
             }
 
             @Override
@@ -74,6 +76,8 @@ public class WelcomeActivity extends AppCompatActivity {
                 isDraggingPage=state==ViewPager.SCROLL_STATE_DRAGGING;
             }
         });
+
+        setPageIndicator(0);
     }
 
     void addPage(String content){
