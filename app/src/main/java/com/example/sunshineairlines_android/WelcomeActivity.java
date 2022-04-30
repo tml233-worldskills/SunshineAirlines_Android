@@ -55,7 +55,7 @@ public class WelcomeActivity extends AppCompatActivity {
         addPage("You can search flights\nand book flights in this app.");
         addPage("Our App will give you\na good experience.");
 
-        WelcomePagerAdapter adp=new WelcomePagerAdapter(pagerViews);
+        ListPagerAdapter adp=new ListPagerAdapter(pagerViews);
         pager.setAdapter(adp);
         pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

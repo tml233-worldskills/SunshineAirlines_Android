@@ -2,6 +2,7 @@ package com.example.sunshineairlines_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.JsonToken;
 import android.view.View;
@@ -44,7 +45,10 @@ public class LoginActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 if(result){
-                    Toast.makeText(LoginActivity.this,"Login succeeded!",Toast.LENGTH_SHORT).show();
+                    inputPassword.setText("");
+                    Intent intent=new Intent(LoginActivity.this,MenuActivity.class);
+                    intent.putExtra("userEmail",email);
+                    startActivity(intent);
                 }else{
                     Toast.makeText(LoginActivity.this,"Login failed!",Toast.LENGTH_SHORT).show();
                 }
