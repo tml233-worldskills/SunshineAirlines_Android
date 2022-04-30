@@ -53,8 +53,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Bundle bundle=getIntent().getExtras();
-        userEmail=bundle.getString("userEmail","tt@gmail.com");
+        userEmail=getIntent().getStringExtra("userEmail");
 
         sponsorPager = findViewById(R.id.menu_sponsor_pager);
 
