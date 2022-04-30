@@ -16,6 +16,7 @@ import android.widget.VideoView;
 
 import org.json.JSONArray;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -46,14 +47,15 @@ public class MenuActivity extends AppCompatActivity {
     Timer sponsorTimer=new Timer();
     TimerTask sponsorTimerTask;
 
-    String userEmail;
+    UserInfo userInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        userEmail=getIntent().getStringExtra("userEmail");
+        Serializable sui=getIntent().getSerializableExtra("userInfo");
+        userInfo=(UserInfo)sui;
 
         sponsorPager = findViewById(R.id.menu_sponsor_pager);
 

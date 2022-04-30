@@ -12,18 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MileagePointsActivity"></activity>
+        <activity android:name=".SearchFlightsResultActivity"/>
+        <activity android:name=".MileagePointsActivity" />
         <activity android:name=".SearchFlightsActivity" />
-        <activity android:name=".MenuActivity">
+        <activity android:name=".MenuActivity"/>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".WelcomeActivity">
-
         </activity>
     </application>
 

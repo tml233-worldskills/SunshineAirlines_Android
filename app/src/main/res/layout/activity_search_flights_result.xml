@@ -4,55 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MileagePointsActivity">
+    tools:context=".SearchFlightsResultActivity">
 
     <TextView
-        android:id="@+id/mileagePoints_text_title"
+        android:id="@+id/searchFlightsResult_text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Mileage Points"
+        android:text="Search Flights Result"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mileagePoints_text_pointsTitle"
+        android:id="@+id/searchFlightsResult_text_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:text="Hi, Mr Katrin Anderson, Your total mileage point is"
+        android:text="Total 0 flights"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mileagePoints_text_title" />
-
-    <TextView
-        android:id="@+id/mileagePoints_text_points"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="114514 Points"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mileagePoints_text_pointsTitle" />
-
-    <TextView
-        android:id="@+id/mileagePoints_text_detailTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:text="Mileage Points Detail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mileagePoints_text_points" />
+        app:layout_constraintTop_toBottomOf="@+id/searchFlightsResult_text_title" />
 
     <ListView
         android:id="@+id/mileagePoints_list"
@@ -62,17 +39,17 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/mileagePoints_btn_back"
+        app:layout_constraintBottom_toTopOf="@+id/searchFlightsResult_btn_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mileagePoints_text_detailTitle"></ListView>
+        app:layout_constraintTop_toBottomOf="@+id/searchFlightsResult_text_total"></ListView>
 
     <Button
-        android:id="@+id/mileagePoints_btn_back"
+        android:id="@+id/searchFlightsResult_btn_back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
         android:layout_marginBottom="8dp"
         android:text="Back"
         android:textAllCaps="false"
