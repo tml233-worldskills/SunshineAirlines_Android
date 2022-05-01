@@ -124,46 +124,17 @@ public class SearchFlightsActivity extends AppCompatActivity {
                 final String cabinType=cabinTypeIds.get(cabinTypeIndex);
                 final String cabinTypeName=cabinTypeNames.get(cabinTypeIndex);
 
-                Future<ArrayList<FlightData>> future=Utils.threads.submit(new Callable<ArrayList<FlightData>>() {
-                    @Override
-                    public ArrayList<FlightData> call() {
-                        ArrayList<FlightData> list=new ArrayList<>();
-                        try {
-                            String str = Utils.sendGet(String.format(Utils.baseUrl + "/flight/list?From=%s&To=%s&CabinType=%s&Date=%s&isAsc=1", from, to, cabinType, date), null);
-                            JSONArray arr=new JSONArray(str);
-                            for(int i=0;i<arr.length();i+=1){
-                                JSONObject obj=arr.getJSONObject(i);
-                                FlightData data=new FlightData();
-                                data.id=obj.getString("Id");
-                                data.airlineName=obj.getString("AirlineName");
-                                data.flightNumber=obj.getString("FlightNumber");
-                                data.price=Float.valueOf(obj.getString("Price"));
-                                String dt=obj.getString("DepartureTime");
-                                String[] split=dt.split(" ");
-                                data.departureDate=split[0];
-                                data.departureTime=split[1];
-                                data.aircraft=obj.getString("Aircraft");
-                                data.availableTickets=Integer.valueOf(obj.getString("AvailableTickets"));
-                                data.cabinTypeId=cabinType;
-                                data.cabinTypeName=cabinTypeName;
-                                list.add(data);
-                            }
-                        }catch (Exception e){
-                            e.printStackTrace();
-                        }
-                        return list;
-                    }
-                });
+                FlightSearchData searchData=new FlightSearchData();
+                searchData.from=from;
+                searchData.to=to;
+                searchData.cabinTypeId=cabinType;
+                searchData.cabinTypeName=cabinTypeName;
+                searchData.date=date;
 
-                try{
-                    ArrayList<FlightData> list=future.get();
-                    Intent intent=new Intent(SearchFlightsActivity.this,SearchFlightsResultActivity.class);
-                    intent.putExtra("userInfo",userInfo);
-                    intent.putExtra("flights",list);
-                    startActivity(intent);
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
+                Intent intent=new Intent(SearchFlightsActivity.this,SearchFlightsResultActivity.class);
+                intent.putExtra("userInfo",userInfo);
+                intent.putExtra("searchData",searchData);
+                startActivity(intent);
             }
         });
 

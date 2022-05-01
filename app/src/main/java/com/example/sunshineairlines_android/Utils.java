@@ -9,7 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Utils {
-    public static boolean debug=true;
+    public static boolean debug=false;
     public static ExecutorService threads= Executors.newFixedThreadPool(1);
     public static String baseUrl="http://10.0.2.2:5000/api";
 

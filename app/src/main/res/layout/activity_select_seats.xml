@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectSeatsActivity">
+
+    <TextView
+        android:id="@+id/selectSeats_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Select Seats"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/selectSeats_text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView\nTextView\nTextView\nTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectSeats_text_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectSeats_text_info">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TableLayout
+            android:id="@+id/tableLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="A"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="C"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/seat1A"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <ImageView
+                    android:id="@+id/seat1C"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/seat2A"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <ImageView
+                    android:id="@+id/seat2C"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/seat3A"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <ImageView
+                    android:id="@+id/seat3C"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="J"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="L"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat1J"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <ImageView
+                    android:id="@+id/seat1L"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat2J"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <ImageView
+                    android:id="@+id/seat2L"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/seat3J"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <ImageView
+                    android:id="@+id/seat3L"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/chair_available" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+            </TableRow>
+
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/chair_available" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Available Seats"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/chair_occupied" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Occupied Seats"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/chair_yourchosen" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Chosen Seat"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/selectSeats_btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Submit"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/selectSeats_btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/selectSeats_btn_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Back"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
