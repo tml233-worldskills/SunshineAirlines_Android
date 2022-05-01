@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.concurrent.Callable;
@@ -25,7 +24,7 @@ public class MileagePointsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mileage_points);
 
         userInfo=(UserInfo)getIntent().getSerializableExtra("userInfo");
-        ListView listView=findViewById(R.id.mileagePoints_list);
+        ListView listView=findViewById(R.id.searchFlightsResult_list);
 
         try {
             ArrayList<MileagePointsData> mpList = Utils.threads.submit(new Callable<ArrayList<MileagePointsData>>() {
