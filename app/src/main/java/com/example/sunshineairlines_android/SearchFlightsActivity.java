@@ -6,9 +6,13 @@ import android.os.Bundle;
 
 public class SearchFlightsActivity extends AppCompatActivity {
 
+    UserInfo userInfo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_flights);
+
+        userInfo=(UserInfo)getIntent().getSerializableExtra("userInfo");
     }
 }

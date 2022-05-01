@@ -54,8 +54,7 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Serializable sui=getIntent().getSerializableExtra("userInfo");
-        userInfo=(UserInfo)sui;
+        userInfo=(UserInfo)getIntent().getSerializableExtra("userInfo");
 
         sponsorPager = findViewById(R.id.menu_sponsor_pager);
 
@@ -149,6 +148,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MenuActivity.this,SearchFlightsActivity.class);
+                intent.putExtra("userInfo", userInfo);
                 startActivity(intent);
             }
         });
@@ -157,6 +157,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MenuActivity.this,MileagePointsActivity.class);
+                intent.putExtra("userInfo", userInfo);
                 startActivity(intent);
             }
         });
